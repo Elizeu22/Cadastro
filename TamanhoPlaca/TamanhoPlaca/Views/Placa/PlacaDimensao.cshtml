@@ -1,0 +1,74 @@
+﻿@model TamanhoPlaca.Models.Placa
+
+@{
+    ViewData["Title"] = "PlacaDimensao";
+}
+
+@*<script src="http://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>*@
+
+<div class="jumbotron">
+    <h4><b>Placa de Taxi </b></h4>
+    <p> Existe uma tradicional indústria no Brasil que produz equipamentos musicais. Atualmente eles estão totalmente imergidos com a era da Indústria 4.0 e a sua principal atuação é a criação de pedais de efeitos para guitarra, que existem em uma diversidade incrível, cada um para um tipo de cliente. Esta indústria implementou um sistema em que o seu cliente cria seu próprio pedal através de um protótipo 3D e interativo, inclusive com sons, simulando o pedal real. Sendo assim, após o cliente gerar seu modelo o mesmo é enviado para a empresa, onde será fabricado. </p>
+
+    <p> Acontece que para ser fabricado, o circuito do pedal é impresso em uma PCI(placa de circuito impresso), que tem um certo tamanho. Porém com a criatividade dos clientes, as placas estão tomando dimensões inimagináveis, tal fato faz com que a placa disponível na empresa não sirva. Como você é um excelente programador e um amante da música, cabe a você criar um programa em que dada as dimensões do circuito do cliente e a dimensão da placa disponível, diga se é possível utilizar ou não aquela placa. </p>
+</div>
+
+@*@using (Html.BeginForm("SuaActionX", "SeuControllerX", FormMethod.Post))
+    {
+        // ...
+    }*@
+
+
+<div class="row">
+    <div class="col-md-4">
+
+        @using (Html.BeginForm("PlacaDimensao", "Placa", FormMethod.Post, new { id = "Dimensao" }))
+        {
+
+
+            <div class="form-group">
+                @Html.Label("Dimensao01:", "Dimensao01:")
+                @Html.TextBoxFor(model => model.Dimensao01, new { @class = "form-control", id = "Dimensao01", required = "required" })
+            </div>
+
+
+
+            <div class="form-group">
+                @Html.Label("Dimensao02:", "Dimensao02:")
+                @Html.TextBoxFor(model => model.Dimensao02, new { @class = "form-control", id = "Dimensao02", required = "required" })
+            </div>
+
+
+            <div class="form-group">
+                @Html.Label("Dimensao03:", "Dimensao03:")
+                @Html.TextBoxFor(model => model.Dimensao03, new { @class = "form-control", id = "Dimensao03", required = "required" })
+            </div>
+
+
+            <div class="form-group">
+                @Html.Label("Dimensao04:", "Dimensao04:")
+                @Html.TextBoxFor(model => model.Dimensao04, new { @class = "form-control", id = "Dimensao04", required = "required" })
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Executar" class="btn btn-danger" id="Executa" />
+            </div>
+
+
+            <div class="form-group">
+                @Html.Label("Resultado:", "Resultado:")
+
+
+                @Html.DisplayFor(m => m.DimensaoResultado, new { @class = "form-control" })
+
+
+            </div>
+
+
+        }
+
+
+    </div>
+
+</div>

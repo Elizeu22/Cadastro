@@ -1,0 +1,94 @@
+﻿@model Papel_Tesoura.Models.Papel
+
+@{
+    ViewData["Title"] = "Spock";
+}
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+
+
+<div class="jumbotron">
+    <h3><b>Pedra-papel-tesoura-lagarto-Spock</b></h3>
+    <p>Pedra-papel-tesoura-lagarto-Spock é uma expansão do clássico método de seleção em jogo de pedra-papel-tesoura. Atua sob o mesmo princípio básico, mas inclui outras duas armas adicionais: o lagarto (formado pela mão igual a uma boca de fantoche) e Spock (formada pela saudação dos vulcanos em Star Trek). Isso reduz as chances de uma rodada terminar em um empate. O jogo foi inventado por Sam Kass e Karen Bryla, como "Rock Paper Scissors Lizard Spock". As regras de vantagem são as seguintes:</p>
+
+    <ul>
+        <li>Tesoura corta papel</li>
+        <li>Papel cobre pedra</li>
+        <li>Pedra derruba lagarto</li>
+        <li>Lagarto adormece Spock</li>
+        <li>Spock derrete tesoura</li>
+        <li>Tesoura prende lagarto</li>
+        <li>Lagarto come papel</li>
+        <li>Papel refuta Spock</li>
+        <li>Spock vaporiza pedra</li>
+        <li>Pedra quebra tesoura</li>
+    </ul>
+
+    <p> Um dia, dois amigos, Rajesh e Sheldon, decidiram apostar quem pagaria um almoço para o outro, com esta brincadeira. Sua missão será fazer um algoritmo que, baseado no que eles escolherem, informe quem irá ganhar ou se dará empate.</p>
+
+
+    <h3>Entrada </h3>
+
+    <p>
+        Cada caso de teste tem duas palavras, representando a escolha de Rajesh e de Sheldon, respectivamente.
+    </p>
+
+    <h3>Saida</h3>
+
+    <p> Imprima quem venceu, ou se houve empate.  </p>
+
+
+
+</div>
+
+
+@*@using (Html.BeginForm("SuaActionX", "SeuControllerX", FormMethod.Post))
+    {
+        // ...
+    }*@
+
+
+<div class="row">
+    <div class="col-md-4">
+
+        @using (Html.BeginForm("Spock", "Spock", FormMethod.Post, new { id = "JogoSpock" }))
+        {
+
+            @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+            <div class="form-group">
+                @Html.Label("Primeira Escolha:", "Primeira Escolha:")
+                @Html.TextBoxFor(model => model.PrimeiraEscolha, new { @class = "form-control", id = "Spock01", required = "required" })
+            </div>
+
+
+
+            <div class="form-group">
+                @Html.Label("Segunda Escolha:", "Segunda Escolha:")
+                @Html.TextBoxFor(model => model.SegundaEscolha, new { @class = "form-control", id = "Spock02", required = "required" })
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Executar" class="btn btn-danger" id="Executa" />
+            </div>
+
+
+            <div class="form-group">
+                @Html.Label("Resultado:", "Resultado:")
+
+
+                @Html.DisplayFor(m => m.QuemGanhou, new { @class = "form-control" })
+
+
+            </div>
+
+
+
+
+        }
+
+
+    </div>
+
+
+</div>
