@@ -1,0 +1,3 @@
+﻿
+
+$('#Modal').load("/Home/ListarUsuario");
