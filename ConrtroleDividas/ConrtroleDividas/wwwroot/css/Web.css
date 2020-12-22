@@ -1,0 +1,75 @@
+﻿
+
+
+
+.sidenav {
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rebeccapurple;
+    overflow-x: hidden;
+    
+}
+
+
+
+     .sidenav i{
+            padding:70px;
+       
+        }
+
+
+.content {
+    margin-left: 250px;
+    padding-left: 25px; 
+    margin-right: 150px;
+    padding-right: 35px;
+    margin-top: 50px;
+    padding-top: 50px;
+    border-radius: 10px;
+    border-style: groove;
+    height: 550px;
+}
+
+   
+
+ 
+.content01 {
+    margin-left: 250px;
+    padding-left: 25px;
+    margin-right: 140px;
+    padding-right: 35px;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-radius: 10px;
+    border-style: groove;
+    background-color: white;
+    height: 550px;
+}
+
+
+
+#Dividas {
+  
+    border-collapse: collapse;
+    width: 100%;
+    padding-top:50px;
+  
+}
+  th,td{
+      text-align: left;
+      padding:8px;
+      
+  }
+   
+  tr:nth-child(even){background-color:#f2f2f2;}
+
+
+@media screen and (max-width:600px){
+    .column{
+        width:100%;
+    }
+}
